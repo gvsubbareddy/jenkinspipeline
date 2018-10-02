@@ -2,6 +2,9 @@ pipeline {
   agent any
   stages {
     stage('checkout') {
+      environment {
+        test = 'value'
+      }
       steps {
         echo 'checkout the code'
         git(url: 'https://github.com/gvsubbareddy/pythonproject.git', changelog: true)
