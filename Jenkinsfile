@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('checkout') {
       environment {
-        ENV = 'INT'
+        ENV = 'INT123'
       }
       steps {
         script {
