@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('checkout') {
       environment {
-        test = 'value'
+        ENV = 'INT'
       }
       steps {
         echo 'checkout the code'
