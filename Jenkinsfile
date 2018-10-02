@@ -1,12 +1,13 @@
 pipeline {
   agent any
+  environment {
+        ENV = 'INT123'
+  }
   stages {
     stage('checkout') {
-      environment {
-        ENV = 'INT123'
-      }
       steps {
         script {
+            echo 'checkout the code from $BRANCH_NAME'
             if($ENV == 'INT') {
                 echo 'checkout the code'
                 git(url: 'https://github.com/gvsubbareddy/pythonproject.git', changelog: true)
