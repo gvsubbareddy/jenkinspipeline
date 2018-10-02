@@ -6,8 +6,13 @@ pipeline {
         ENV = 'INT'
       }
       steps {
-        echo 'checkout the code'
-        git(url: 'https://github.com/gvsubbareddy/pythonproject.git', changelog: true)
+        script {
+            if($ENV == 'INT') {
+                echo 'checkout the code'
+                git(url: 'https://github.com/gvsubbareddy/pythonproject.git', changelog: true)
+            } else {
+                error 'the application is not  deployed!'
+            }
       }
     }
     stage('compile') {
