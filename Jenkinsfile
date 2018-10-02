@@ -4,6 +4,7 @@ pipeline {
     stage('checkout') {
       steps {
         echo 'checkout the code'
+        git(url: 'https://github.com/gvsubbareddy/pythonproject.git', changelog: true)
       }
     }
     stage('compile') {
