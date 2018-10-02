@@ -13,6 +13,7 @@ pipeline {
             } else {
                 error 'the application is not  deployed!'
             }
+        }
       }
     }
     stage('compile') {
