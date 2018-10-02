@@ -8,12 +8,12 @@ pipeline {
     }
     stage('compile') {
       steps {
-        sh 'cd abc'
+        echo 'cd abc'
       }
     }
     stage('deploy') {
       steps {
-        sh 'cd bcd'
+        echo 'cd bcd'
       }
     }
     stage('email') {
