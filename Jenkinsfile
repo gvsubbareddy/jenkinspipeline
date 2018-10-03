@@ -13,7 +13,7 @@ pipeline {
                 echo 'checkout the code'
                 git(url: 'https://github.com/gvsubbareddy/pythonproject.git', changelog: true)
             } else {
-                error 'the application is not  deployed!'
+                echo 'the application is not  deployed!'
             }
         }
       }
