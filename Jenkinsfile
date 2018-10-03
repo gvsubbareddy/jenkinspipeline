@@ -1,6 +1,5 @@
 pipeline {
-  /*agent any*/
-  agent { label 'windows' }
+  agent any
   environment {
         ENV = 'INT123'
   }
