@@ -3,6 +3,12 @@ pipeline {
   environment {
         ENV = 'INT123'
   }
+  parameters {
+         choice(
+             choices: 'mkt\nint\npv\ndocker',
+             description: 'Deploy to Environment',
+             name: 'REQUESTED_ACTION')
+  }
   stages {
     stage('checkout') {
       steps {
